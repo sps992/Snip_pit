@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from snip_pit.views import SnippetList
+from rest_framework import routers
 
-urlpatterns = [
-    path('', include('snip_pit.urls')),
-    path('admin/', admin.site.urls),
-]
+router = routers.DefaultRouter()
+router.register(r'snippets', SnippetList)
+
+urlpatterns = router.urls
