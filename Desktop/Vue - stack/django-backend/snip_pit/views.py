@@ -15,9 +15,10 @@ class SnippetList(viewsets.ModelViewSet):
     search_fields = ('title', 'description', 'code_snippet')
     
 
-class SnippetDetail(viewsets.ModelViewSet):
-    """ Retrieve, update or delete a code snippet """
-    authentication_classes = (BasicAuthentication,)
-    permissions_classes = (IsAuthenticated,)
-    queryset = Snippet.objects.all()
-    serializer_class = SnippetSerializer
+# class SnippetDetail(viewsets.ModelViewSet):
+#     """ Retrieve, update or delete a code snippet """
+#     authentication_classes = (BasicAuthentication,)
+#     permissions_classes = (IsAuthenticated,)
+#     queryset = Snippet.objects.all()
+#     serializer_class = SnippetSerializer
+
