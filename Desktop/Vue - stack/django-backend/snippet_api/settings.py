@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://snip-pit.herokuapp.com/','127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['snip-pit.herokuapp.com','127.0.0.1', 'localhost']
 
 CORS_ORIGIN_ALLOW_ALL = True
 # Application definition
