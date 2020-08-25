@@ -9,12 +9,12 @@ STYLE_CHOICES = sorted([(item, item) for item in get_all_styles()])
 class Snippet(models.Model):
     """Model to build simple snippet details"""
     team_member = (
-        ("IAN_MALCOLM", "Ian Malcolm"),
-        ("JON_HAMMOND", "John Hammond"),
-        ("ALAN_GRANT", "Alan Grant"),
-        ("DENNIS_NEDRY", "Dennis Nedry"),
-        ("DR_HENRY_WU", "Dr Henry Wu"),
-        ("RAY_ARNOLD", "Ray Arnold"),
+        ("Ian Malcolm", "Ian Malcolm"),
+        ("John Hammond", "John Hammond"),
+        ("Alan Grant", "Alan Grant"),
+        ("Dennis Nedry", "Dennis Nedry"),
+        ("Dr Henry Wu", "Dr Henry Wu"),
+        ("Ray Arnold", "Ray Arnold"),
     )
 
     created_by = models.CharField(choices=team_member, default=' ', max_length=254, blank=True, null=True)

@@ -1,8 +1,8 @@
 <template>
 <div class=" bg-gray-800 w-full h-screen text-white">
     <div class="container  text-left mx-auto">
-   <h1 class="text-5xl">Create Snippet</h1>
-   <p>Store your snip in the pit...</p>
+   <h1 class="text-5xl text-center">Create Snippet</h1>
+   <p class="text-center">Store your snip in the pit...</p>
    <form class="w-full max-w-md mx-auto m-10">
   <div class="md:flex md:items-center mb-6">
     <div class="md:w-2/4">
@@ -12,8 +12,13 @@
     </div>
     <div class="md:w-2/4">
      <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="created-by">
-         <option>Team Member</option>
-         <option>Team Member 2</option>
+         <option>Select a team member</option>
+         <option>Ian Malcolm</option>
+         <option>John Hammond</option>
+         <option>Alan Grant</option>
+         <option>Dennis Nedry</option>
+         <option>Dr.Henry Wu</option>
+         <option>Henry Arnold</option>
     </select>
 
     </div>
