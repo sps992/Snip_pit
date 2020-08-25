@@ -1,47 +1,32 @@
 <template>
-  <div id="app" class="bg-teal-700 w-full h-screen text-gray-100">
-    <div class="container text-center mx-auto">
-   <h1 class="text-5xl">Snip Pit</h1>
-   <p>A pit to store your snips...</p>
-   <input type="text" v-model="search" placeholder="Search the pit..." />
-   <ul v-for="snippet in snippets" v-bind:key="snippet.id">
-    <li>{{snippet.title}}</li>
-    </ul>
+  <div id="app">
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/create">Create</router-link>
     </div>
+    <router-view />
   </div>
 </template>
-
 <script>
-import axios from 'axios'
-
 export default {
-    name: 'List',
-    data() {
-        return {
-            snippets: []
-
-        }
-    },
-    mounted () {
-        this.getSnippets()
-    },
-    methods: {
-        getSnippets() {
-            axios({
-                method: 'get',
-                url: 'http://127.0.0.1:8000/snippets',
-                auth: {
-                    username: 'admin',
-                    password: 'S3dg3m4n'
-                }
-            }).then(response => this.snippets = response.data)
-        }
-        }
-    }
-
+  
+}
 </script>
-
 <style lang="scss">
-@import "assets/css/tailwind.css"
+@import "assets/css/tailwind.css";
 
+h1{padding-top: 2.5rem}
+
+#nav {
+  padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #B794F4;
+    }
+  }
+}
 </style>
